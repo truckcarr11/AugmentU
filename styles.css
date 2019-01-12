@@ -1,0 +1,29 @@
+.usernameTakenPrompt {
+  display: none;
+}
+
+.invalidPrompt {
+  display: none;
+}
+
+.targetContainer {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.target {
+  flex: 0 0 auto;
+  margin: 5px;
+}
+
+.targetImage {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+#createTargetCard {
+  cursor: pointer;
+}
