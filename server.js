@@ -7,7 +7,6 @@ const vuforia = require('vuforia-api');
 var util = vuforia.util();
 const app = express();
 const server = require('http').createServer(app);
-const port = 3000;
 
 mongoose.connect(process.env.databaseURL);
 
