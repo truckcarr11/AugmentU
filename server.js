@@ -84,12 +84,12 @@ app.post('/api/users/login', function(req, res) {
 					return;
 				} else
 					res.send({
-						Text: 'Invalid Username/Password'
+						Text: 'Invalid Username/Password.'
 					});
 			});
 		} else
 			res.send({
-				Text: 'Invalid Username/Password'
+				Text: 'Invalid Username/Password.'
 			});
 	});
 });
@@ -102,7 +102,7 @@ app.post('/api/users/register', function(req, res) {
 		}
 		if (user != null) {
 			res.send({
-				Text: 'Username Taken'
+				Text: 'Username Taken.'
 			});
 			return;
 		}
@@ -115,7 +115,7 @@ app.post('/api/users/register', function(req, res) {
 					targets: []
 				});
 				res.send({
-					Text: 'User Registered'
+					Text: 'User Registered.'
 				});
 			});
 		});
