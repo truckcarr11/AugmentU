@@ -98,7 +98,7 @@ function createTarget() {
     </div>
   </div>`;
 			$('#targetContainer > div:last').before(target);
-			fetch('http://localhost:3000/api/targets/add', {
+			fetch('/api/targets/add', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ function createTarget() {
 }
 
 function getUserTargetImages() {
-	fetch('http://localhost:3000/api/users/' + user.username + '/targets', {
+	fetch('/api/users/' + user.username + '/targets', {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json'
