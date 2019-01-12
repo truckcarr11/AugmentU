@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const vuforia = require('vuforia-api');
 var util = vuforia.util();
 const app = express();
+const server = require('http').createServer(app);
 const port = 3000;
 
 mongoose.connect(process.env.databaseURL);
@@ -23,6 +24,9 @@ const Target = require('./models/target');
 app.use(bodyParser.json());
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', parameterLimit: 100000, extended: false }));
+
+server.listen(process.env.PORT || 3000);
+console.log('Server running.');
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
@@ -151,5 +155,3 @@ app.post('/api/targets/add', function(req, res) {
 		if (error) console.log(error);
 	});
 });
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
